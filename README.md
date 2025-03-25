@@ -101,4 +101,4 @@ For issues, questions, or contributions, please open an issue or submit a pull r
 
 ---
 
-Made with ❤️ by [Your Name] 
+Made by Harsh Patel
