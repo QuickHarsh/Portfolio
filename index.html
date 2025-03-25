@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Portfolio</title>
+    <title>Harsh Patel | Cyberpunk Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Adding theme color for mobile browsers -->
+    <meta name="theme-color" content="#000000">
 </head>
 <body>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/music/Måneskin - I WANNA BE YOUR SLAVE (LyricsTesto) Eurovision 2021.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="music-toggle">
+        <button id="musicToggle" title="Toggle Music">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="#home">Portfolio</a>
+                    <a href="#home" data-text="Portfolio">Portfolio</a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -34,7 +48,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Harsh Patel</span></h1>
+                <h1 data-text="Hi, I'm Harsh Patel">Hi, I'm <span class="highlight">Harsh Patel</span></h1>
                 <h2 class="typing">I'm a <span class="typed-text"></span></h2>
                 <p>Welcome to my professional portfolio showcasing my work and expertise.</p>
                 <div class="cta-buttons">
@@ -49,9 +63,9 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-container" style="box-shadow: 10px 10px 0 0 rgb(0, 0, 0);">
+                <div class="image-container">
                     <div class="placeholder-image">
-                        <img src="assets/img/WhatsApp Image 2025-03-25 at 17.01.44.jpeg">
+                        <img src="assets/img/WhatsApp Image 2025-03-25 at 17.01.44.jpeg" alt="Harsh Patel">
                     </div>
                 </div>
             </div>
@@ -64,7 +78,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
+                <h2 data-text="About Me">About Me</h2>
                 <div class="underline"></div>
             </div>
             <div class="about-content">
@@ -102,7 +116,86 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn primary-btn" download>Download CV</a>
+                    <a href="assets/resume/resume.pdf" class="btn primary-btn" download>Download CV <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-text="My Resume">My Resume</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="resume-content">
+                <div class="resume-download">
+                    <p>Here's a comprehensive overview of my professional background. For a detailed version, you can download my complete resume below.</p>
+                    <a href="assets/resume/resume.pdf" class="btn primary-btn" download>Download Resume <i class="fas fa-download"></i></a>
+                </div>
+                
+                <div class="resume-sections">
+                    <div class="resume-section">
+                        <h3 class="resume-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <h4>Web Developer</h4>
+                                <div class="resume-item-time">2022 - Present</div>
+                            </div>
+                            <h5>Tech Company Inc.</h5>
+                            <p>Led development of multiple web applications and managed a team of junior developers. Implemented modern frontend frameworks and improved site performance by 40%.</p>
+                            <ul class="resume-item-list">
+                                <li>Architected and developed responsive web applications</li>
+                                <li>Mentored junior developers and conducted code reviews</li>
+                                <li>Optimized application performance and implemented CI/CD pipelines</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <h4>Web Developer Intern</h4>
+                                <div class="resume-item-time">2021 - 2022</div>
+                            </div>
+                            <h5>Digital Agency Studio</h5>
+                            <p>Created custom websites and e-commerce solutions for various clients across different industries.</p>
+                            <ul class="resume-item-list">
+                                <li>Developed responsive websites for 15+ clients</li>
+                                <li>Implemented e-commerce functionality and payment integrations</li>
+                                <li>Collaborated with design team to create seamless user experiences</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h3 class="resume-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <h4>B.Tech CS-AI/ML</h4>
+                                <div class="resume-item-time">2020 - 2024</div>
+                            </div>
+                            <h5>Newton School of Technology</h5>
+                            <p>Focusing on computer science with specialization in artificial intelligence and machine learning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h3 class="resume-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <h4>Full Stack Web Development</h4>
+                                <div class="resume-item-time">2022</div>
+                            </div>
+                            <h5>Certification Provider</h5>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <h4>UI/UX Design Fundamentals</h4>
+                                <div class="resume-item-time">2023</div>
+                            </div>
+                            <h5>Certification Provider</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +204,7 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2>My Skills</h2>
+                <h2 data-text="My Skills">My Skills</h2>
                 <div class="underline"></div>
             </div>
             <div class="skills-content">
@@ -241,7 +334,7 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2>My Projects</h2>
+                <h2 data-text="My Projects">My Projects</h2>
                 <div class="underline"></div>
             </div>
             <div class="filter-buttons">
@@ -329,7 +422,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
+                <h2 data-text="Get In Touch">Get In Touch</h2>
                 <div class="underline"></div>
             </div>
             <div class="contact-content">
@@ -387,7 +480,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>Thanks For Visiting 🫠</p>
+                <p>Thanks For Visiting <span class="highlight">✦</span></p>
                 <div class="back-to-top">
                     <a href="#home"><i class="fas fa-arrow-up"></i></a>
                 </div>
